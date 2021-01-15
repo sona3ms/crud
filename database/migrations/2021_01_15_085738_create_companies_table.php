@@ -14,8 +14,6 @@ class CreateCompaniesTable extends Migration
     public function up()
     {
         Schema::create('companies', function (Blueprint $table) {
-            $table->id();
-            Schema::create('companies', function (Blueprint $table) {
                 $table->id();
                 $table->string('title')->unique();
                 $table->bigInteger('created_by')->nullable()->unsigned();
@@ -24,8 +22,6 @@ class CreateCompaniesTable extends Migration
                 $table->foreign('updated_by')->references('id')->on('users')->onDelete('set null');
                 $table->timestamps();
             });
-            $table->timestamps();
-        });
     }
 
     /**
